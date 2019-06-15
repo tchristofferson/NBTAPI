@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Compatibility" />
         <module name="v1_8_R3" />
+        <module name="v1_10_R1" />
         <module name="NBTAPI" />
         <module name="v1_9_R2" />
       </profile>
