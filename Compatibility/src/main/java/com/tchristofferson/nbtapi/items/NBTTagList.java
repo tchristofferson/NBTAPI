@@ -4,6 +4,7 @@ public interface NBTTagList extends NBTBase {
 
     void add(NBTBase nbtBase);
     NBTBase remove(int index);
+    NBTBase get(int index);
     boolean contains(NBTBase nbtBase);
     boolean isEmpty();
     int getSize();

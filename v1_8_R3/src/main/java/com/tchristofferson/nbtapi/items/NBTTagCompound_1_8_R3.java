@@ -65,6 +65,8 @@ public class NBTTagCompound_1_8_R3 implements NBTTagCompound {
         for (NBTBase nbtBase : l) {
             nbtTagList.add((net.minecraft.server.v1_8_R3.NBTBase) nbtBase.getHandle());
         }
+
+        handle.set(tag, nbtTagList);
     }
 
     public byte getByte(String tag) {
@@ -110,9 +112,7 @@ public class NBTTagCompound_1_8_R3 implements NBTTagCompound {
     public List<NBTBase> getList(String tag) {
         net.minecraft.server.v1_8_R3.NBTBase nbtBase = handle.get(tag);
 
-        if (nbtBase == null || nbtBase.getTypeId() != 9) {
-            return null;
-        }
+        if (nbtBase == null || nbtBase.getTypeId() != 9) return null;
 
         NBTTagList nbtTagList = (NBTTagList) nbtBase;
         List<NBTBase> list = new ArrayList<>(nbtTagList.size());

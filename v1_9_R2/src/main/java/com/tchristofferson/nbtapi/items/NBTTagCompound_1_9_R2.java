@@ -1,8 +1,10 @@
 package com.tchristofferson.nbtapi.items;
 
+import net.minecraft.server.v1_9_R2.NBTTagList;
 import org.bukkit.craftbukkit.v1_9_R2.inventory.CraftItemStack;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NBTTagCompound_1_9_R2 implements NBTTagCompound {
@@ -54,7 +56,13 @@ public class NBTTagCompound_1_9_R2 implements NBTTagCompound {
     }
 
     public void setList(String tag, List<NBTBase> l) {
-        //TODO
+        NBTTagList nbtTagList = new NBTTagList();
+
+        for (NBTBase nbtBase : l) {
+            nbtTagList.add((net.minecraft.server.v1_9_R2.NBTBase) nbtBase.getHandle());
+        }
+
+        handle.set(tag, nbtTagList);
     }
 
     public byte getByte(String tag) {
@@ -97,9 +105,20 @@ public class NBTTagCompound_1_9_R2 implements NBTTagCompound {
         return handle.getBoolean(tag);
     }
 
-    //TODO
     public List<NBTBase> getList(String tag) {
-        return null;
+        net.minecraft.server.v1_9_R2.NBTBase nbtBase = handle.get(tag);
+
+        if (nbtBase == null || nbtBase.getTypeId() != 9) return null;
+
+        NBTTagList nbtTagList = (NBTTagList) nbtBase;
+        List<NBTBase> list = new ArrayList<>(nbtTagList.size());
+
+        for (int i = 0; i < nbtTagList.size(); i++) {
+            net.minecraft.server.v1_9_R2.NBTBase base = nbtTagList.get(i);
+            list.add(NBTTypeUtil_1_9_R2.getWrapper(base));
+        }
+
+        return list;
     }
 
     public boolean hasKey(String tag) {

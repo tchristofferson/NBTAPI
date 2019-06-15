@@ -14,16 +14,16 @@ public class NBTTagList_1_8_R3 implements NBTTagList {
         }
     }
 
-    public Object getHandle() {
-        return handle;
-    }
-
     public void add(NBTBase nbtBase) {
         handle.add((net.minecraft.server.v1_8_R3.NBTBase) nbtBase.getHandle());
     }
 
     public NBTBase remove(int index) {
         return NBTTypeUtil_1_8_R3.getWrapper(handle.a(index));
+    }
+
+    public NBTBase get(int index) {
+        return NBTTypeUtil_1_8_R3.getWrapper(handle.get(index));
     }
 
     public boolean contains(NBTBase nbtBase) {
@@ -40,6 +40,10 @@ public class NBTTagList_1_8_R3 implements NBTTagList {
 
     public int getSize() {
         return handle.size();
+    }
+
+    public Object getHandle() {
+        return handle;
     }
 
     public boolean equals(Object o) {
