@@ -141,4 +141,8 @@ public class NBTTagCompound_1_9_R2 implements NBTTagCompound {
         return handle;
     }
 
+    public boolean equals(Object o) {
+        return o instanceof NBTTagCompound_1_9_R2 && handle.equals(((NBTTagCompound_1_9_R2) o).getHandle());
+    }
+
 }

@@ -17,7 +17,7 @@ public class NBTTagShort_1_8_R3 implements NBTTagShort {
     }
 
     public boolean equals(Object o) {
-        return o instanceof NBTTagShort_1_8_R3 && handle.equals(o);
+        return o instanceof NBTTagShort_1_8_R3 && handle.equals(((NBTTagShort_1_8_R3) o).getHandle());
     }
 
 }

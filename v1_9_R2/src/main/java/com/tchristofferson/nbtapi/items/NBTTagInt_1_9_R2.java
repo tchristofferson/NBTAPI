@@ -16,4 +16,8 @@ public class NBTTagInt_1_9_R2 implements NBTTagInt {
         return handle;
     }
 
+    public boolean equals(Object o) {
+        return o instanceof NBTTagInt_1_9_R2 && handle.equals(((NBTTagInt_1_9_R2) o).getHandle());
+    }
+
 }

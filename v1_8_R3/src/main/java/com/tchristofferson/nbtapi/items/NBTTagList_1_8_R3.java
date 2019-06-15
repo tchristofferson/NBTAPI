@@ -47,7 +47,7 @@ public class NBTTagList_1_8_R3 implements NBTTagList {
     }
 
     public boolean equals(Object o) {
-        return o instanceof NBTTagList_1_8_R3 && handle.equals(o);
+        return o instanceof NBTTagList_1_8_R3 && handle.equals(((NBTTagList_1_8_R3) o).getHandle());
     }
 
 }

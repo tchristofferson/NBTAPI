@@ -17,7 +17,7 @@ public class NBTTagByteArray_1_8_R3 implements NBTTagByteArray {
     }
 
     public boolean equals(Object o) {
-        return o instanceof NBTTagByteArray_1_8_R3 && handle.equals(o);
+        return o instanceof NBTTagByteArray_1_8_R3 && handle.equals(((NBTTagByteArray_1_8_R3) o).getHandle());
     }
 
 }

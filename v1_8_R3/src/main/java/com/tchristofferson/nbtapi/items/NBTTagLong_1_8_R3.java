@@ -17,7 +17,7 @@ public class NBTTagLong_1_8_R3 implements NBTTagLong {
     }
 
     public boolean equals(Object o) {
-        return o instanceof NBTTagLong_1_8_R3 && handle.equals(o);
+        return o instanceof NBTTagLong_1_8_R3 && handle.equals(((NBTTagLong_1_8_R3) o).getHandle());
     }
 
 }

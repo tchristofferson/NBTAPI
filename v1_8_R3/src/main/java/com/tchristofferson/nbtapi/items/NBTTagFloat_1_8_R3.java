@@ -17,7 +17,7 @@ public class NBTTagFloat_1_8_R3 implements NBTTagFloat {
     }
 
     public boolean equals(Object o) {
-        return o instanceof NBTTagFloat_1_8_R3 && handle.equals(o);
+        return o instanceof NBTTagFloat_1_8_R3 && handle.equals(((NBTTagFloat_1_8_R3) o).getHandle());
     }
 
 }
