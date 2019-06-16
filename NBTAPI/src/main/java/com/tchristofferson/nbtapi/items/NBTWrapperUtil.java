@@ -1,6 +1,7 @@
 package com.tchristofferson.nbtapi.items;
 
 import com.tchristofferson.nbtapi.items.wrappercreatorimpl.WrapperCreator_1_10_R1;
+import com.tchristofferson.nbtapi.items.wrappercreatorimpl.WrapperCreator_1_11_R1;
 import com.tchristofferson.nbtapi.items.wrappercreatorimpl.WrapperCreator_1_8_R3;
 import com.tchristofferson.nbtapi.items.wrappercreatorimpl.WrapperCreator_1_9_R2;
 import org.bukkit.Bukkit;
@@ -24,7 +25,7 @@ public class NBTWrapperUtil {
         } else if (version.equals("v_1_10_R1")) {
             wrapperCreator = new WrapperCreator_1_10_R1();
         } else if (version.equals("v_1_11_R1")) {
-            wrapperCreator = new WrapperCreator_1_8_R3();
+            wrapperCreator = new WrapperCreator_1_11_R1();
         } else if (version.equals("v_1_12_R1")) {
             wrapperCreator = new WrapperCreator_1_8_R3();
         } else if (version.equals("v_1_13_R2")) {

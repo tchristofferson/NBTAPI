@@ -39,13 +39,11 @@ class NBTTypeUtil_1_9_R2 {
             List<NBTBase> list = new ArrayList<>(nbtList.size());
 
             for (int i = 0; i < nbtList.size(); i++) {
-
                 NBTBase nbtBase = getWrapper(nbtList.get(i));
 
                 if (nbtBase != null) {
                     list.add(nbtBase);
                 }
-
             }
 
             return new NBTTagList_1_9_R2(list);
